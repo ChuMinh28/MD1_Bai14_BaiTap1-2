@@ -9,7 +9,7 @@
 <script>
 
 
-    let temperature = new Temperature(25);
+    let temperature = new Temperature(+prompt('Enter the Celsius: '));
     let fahrenheit = temperature.getFahrenheit()
     let kevin = temperature.getKevin()
     document.write('Celsius is: '+temperature.getCelsius()+'<br>')
