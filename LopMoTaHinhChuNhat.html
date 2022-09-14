@@ -12,19 +12,23 @@
     let rectangle1 = new Rectangle(+prompt('Enter the width: '),+prompt('Enter the height: '))
     let area = rectangle1.getArea()
     let perimeter = rectangle1.getPerimeter()
-    // rectangle1.setWidth(300)
-    // rectangle1.setHeight(100)
-    document.write('Chieu dai hinh chu nhat la: '+rectangle1.getWidth()+'<br>')
-    document.write('Chieu rong hinh chu nhat la: '+rectangle1.getHeight()+'<br>')
-    document.write('Chu vi hinh chu nhat la: '+perimeter+'<br>')
-    document.write('Dien tich hinh chu nhat la: '+area)
 
-let canvas = document.getElementById('myCanvas');
+    let canvas = document.getElementById('myCanvas');
     let rts = canvas.getContext('2d')
+
     rts.beginPath()
     rts.strokeStyle = 'blue'
     rts.strokeRect(30,30,rectangle1.getWidth(),rectangle1.getHeight())
     rts.stroke()
+    rts.closePath()
+
+    rts.beginPath()
+    rts.font = '20px Arial Black'
+    rts.fillStyle = 'black'
+    rts.fillText('Chieu dai hinh chu nhat la: '+rectangle1.getWidth(),30,400)
+    rts.fillText('Chieu rong hinh chu nhat la: '+rectangle1.getHeight(),30,430)
+    rts.fillText('Chu vi hinh chu nhat la: '+perimeter,30,460)
+    rts.fillText('Dien tich hinh chu nhat la: '+area,30,490)
     rts.closePath()
 
 </script>
