@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Rectangle.js"></script>
+</head>
+<canvas id="myCanvas" width="800" height="500" style="border: 5px solid green"></canvas>
+<br>
+<body>
+<script>
+    let rectangle1 = new Rectangle(500,300)
+    let area = rectangle1.getArea()
+    let perimeter = rectangle1.getPerimeter()
+    // rectangle1.setWidth(300)
+    // rectangle1.setHeight(100)
+    document.write('Chieu dai hinh chu nhat la: '+rectangle1.getWidth()+'<br>')
+    document.write('Chieu rong hinh chu nhat la: '+rectangle1.getHeight()+'<br>')
+    document.write('Chu vi hinh chu nhat la: '+perimeter+'<br>')
+    document.write('Dien tich hinh chu nhat la: '+area)
+
+let canvas = document.getElementById('myCanvas');
+    let rts = canvas.getContext('2d')
+    rts.beginPath()
+    rts.strokeStyle = 'blue'
+    rts.strokeRect(30,30,rectangle1.getWidth(),rectangle1.getHeight())
+    rts.stroke()
+    rts.closePath()
+
+</script>
+</body>
+</html>
